@@ -10,9 +10,10 @@ So, I need the data and I need a bit of filtering, aggregation, and sorting.  He
 
 ### The data
 
-The stunningly useful (Paleobiology Database)[https://paleobiodb.org/] allows you to download a list of fossils that reside in museum collections with information about where they were found.
+The stunningly useful [Paleobiology Database](https://paleobiodb.org/) allows you to download a list of fossils that reside in museum collections with information about where they were found.
 
 ![](doc/images/pbdb_color.jpg)
+
 **The data were downloaded from the Paleobiology Database on 28 February, 2021, choosing 'specimens' and the following parameters: cc = ATA,AFR,ASI,AUS,EUR,IOC,NOA,OCE,SOA**
 
 The database records have taxonomic classifications from which I choose to use: 
@@ -26,7 +27,7 @@ The location data includes the following fields which I found useful:
 4. county
 
 #### But I want more data
-I would find it convenient to select my geographic region by first specifying a country, then a state/province, then a county.  However, the dataset doesn't include a country feature.  I'll have to add that.  Luckily the (geopy)[https://pypi.org/project/geopy/] library can do that for me given the lat/lng pairs that I have for each record.
+I would find it convenient to select my geographic region by first specifying a country, then a state/province, then a county.  However, the dataset doesn't include a country feature.  I'll have to add that.  Luckily the [geopy](https://pypi.org/project/geopy/) library can do that for me given the lat/lng pairs that I have for each record.
 
 ### Preprocessing the data
 Actually, geocoding is a fairly computationally expensive task.  To mitigate that, I do it in two steps.  First, I identify the unique latitude/longitude pairs and geocode those.  There are about ten times fewer unique pairs than records in the dataset.  So, that drops geocoding expenses to around 1/10th of what they would have been.
@@ -48,12 +49,12 @@ All that preprocessing leads to the script that I care most about (i.e., the one
 ### Caveats
 1. **The data is as clean and complete as it stands in the Paleobiology Database**
 Rather than clean up the data "downstream" (i.e., as part of this project) we will be working with the Paleobiology Database to help them improve their already excellent resource.  We will follow their recommended procedures from:
-(What should I do if I spot an error in the database?)[https://paleobiodb.org/#/faq/what-should-i-do-if-i-spot-an-error-in-the-database-]
+[What should I do if I spot an error in the database?](https://paleobiodb.org/#/faq/what-should-i-do-if-i-spot-an-error-in-the-database-)
 and
-(How do I report bugs?)[https://paleobiodb.org/#/faq/how-do-i-report-bugs-]
+[How do I report bugs?](https://paleobiodb.org/#/faq/how-do-i-report-bugs-)
 
 2. **Only professional quality fossils are represented**
-The fossils in this database may not represent what you and I find (or find most frequentyly) in the field.  The fossils in the (Paleobiology Database)[https://paleobiodb.org/] are those that made it into museums, collections, and/or are mentioned in scientific publications.  Still, that's a good sign.  I'd like to find something that nice!
+The fossils in this database may not represent what you and I find (or find most frequentyly) in the field.  The fossils in the [Paleobiology Database](https://paleobiodb.org/) are those that made it into museums, collections, and/or are mentioned in scientific publications.
 
 
 
