@@ -54,7 +54,7 @@ and
 [How do I report bugs?](https://paleobiodb.org/#/faq/how-do-i-report-bugs-)
 
 2. **Only professional quality fossils are represented**
-The fossils in this database may not represent what you and I find (or find most frequentyly) in the field.  The fossils in the [Paleobiology Database](https://paleobiodb.org/) are those that made it into museums, collections, and/or are mentioned in scientific publications.
+The fossils in this database may not represent what you and I find (or find most frequently) in the field.  The fossils in the [Paleobiology Database](https://paleobiodb.org/) are those that made it into museums, collections, and/or are mentioned in scientific publications.
 
 
 
