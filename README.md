@@ -32,7 +32,7 @@ I would find it convenient to select my geographic region by first specifying a 
 ### Preprocessing the data
 Actually, geocoding is a fairly computationally expensive task.  To mitigate that, I do it in two steps.  First, I identify the unique latitude/longitude pairs and geocode those.  There are about ten times fewer unique pairs than records in the dataset.  So, that drops geocoding expenses to around 1/10th of what they would have been.
 
-I store those geocoded lat/lng pairs in a dictionary which can do quick lookups (thanks HashTable algorithm!).  Then, I create the new "country" column in the dataset and lookup its value for each record from the dictionary.
+I store those geocoded lat/lng pairs in a dictionary which can do quick lookups (thanks HashTable data structure!).  Then, I create the new "country" column in the dataset and lookup its value for each record from the dictionary.
 
 I also save the geocoded lat/lng pairs and the finished dataframe (with the country column) so I don't have to redo these geocoding tasks.
 
